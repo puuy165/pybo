@@ -24,7 +24,6 @@ def index(request):
 
     #카테고리
     if ca and ca != '0':
-        print("들어옴")
         question_list = question_list.filter(
             Q(category__pk__icontains=ca)
         ).distinct()
